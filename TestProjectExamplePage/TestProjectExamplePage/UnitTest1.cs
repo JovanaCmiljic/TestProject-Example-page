@@ -39,10 +39,11 @@ namespace TestProjectExamplePage
 
                 _homePage.Country.SendKeys("Serbia");
                 _homePage.Address.SendKeys("Masarikova");
-                _homePage.Email.SendKeys("testdomaci.com");
+                _homePage.Email.SendKeys("testdomaci@gmail.com");
                 _homePage.Phone.SendKeys("12345678");
                 _homePage.Save.Click();
-                _homePage.LogoutButton.Click();
+
+                Assert.That("Saved",Is.EqualTo(_homePage.SaveText.Text));
 
 
             }
